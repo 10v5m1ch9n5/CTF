@@ -1,6 +1,6 @@
 # Mr. Robot
 
-- Attacking machine : Linux kali
+- Attacking machine : Linux kali on IP address 10.10.10.4
 - Target machine : [Mr. Robot](https://www.vulnhub.com/entry/mr-robot-1,151/) by Leon Johnson on IP address 10.10.10.14
 
 ## Vulnerability analysis
@@ -91,7 +91,7 @@ The Wordpress login page (/login redirects to /wp-login).
 
 #### `/0`
 
-The Wordpress site
+The Wordpress blog.
 
 #### `/license`
 
@@ -115,7 +115,7 @@ We've also found a wordlist file `fsocity.dic` containing 858160 word (one per l
 
 ## Exploitation
 
-We log into the Wordpress blog with elliot's credentials and it works, we're in :
+We log into the Wordpress blog with elliot's credentials and we're in :
 
 ![wp.PNG](wp.PNG)
 
@@ -140,4 +140,10 @@ Then, we find the home of the user `robot` the daemon hasn't got the permission 
 The second key is ours.
 
 ## Privilege Escalation
+
+`linpeas` tells us that the `nmap` program is installed on the system. `nmap` versions between 2.02 and 5.21 have an interactive mode that can be used to execute shell commands.
+
+The version of `nmap` is 3.81 and it has the SUID bit set so it's over :
+
+![key3](key3.PNG)
 
