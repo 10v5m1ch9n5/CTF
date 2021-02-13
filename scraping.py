@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 url = "http://lamp4.ctf"
 
 wordlist = open("/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt")
-# wordlist = open("fake.txt")
 
 lignes = wordlist.readlines()
 
