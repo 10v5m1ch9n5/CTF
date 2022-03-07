@@ -1,7 +1,7 @@
-# LampSecurity CTF3 by MadIrish2600
+# LampSecurity CTF4 by MadIrish2600
 
 - attacker IP : `10.10.10.4`
-- lampCTF3 IP : `10.10.10.5`
+- lampCTF4 IP : `10.10.10.5`
 
 # Reconnaissance
 
